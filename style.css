@@ -1,6 +1,20 @@
+html {
+  height: 100%;
+}
+
 body{
-  background: url("https://img.freepik.com/fotos-gratis/fundo-de-produto-de-praia_53876-90146.jpg?w=740&t=st=1687983161~exp=1687983761~hmac=e4e79fc42a33fd463ffcd62bfe183d6fb359351ffe1f4fb1cae3130bbe9e78c5") center no-repeat fixed; 
-  background-size: cover;
+  background-image: url('https://img.freepik.com/fotos-gratis/fundo-de-produto-de-praia_53876-90146.jpg?w=740&t=st=1687983161~exp=1687983761~hmac=e4e79fc42a33fd463ffcd62bfe183d6fb359351ffe1f4fb1cae3130bbe9e78c5');
+  background-position: top center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:  cover;
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
 }
 
 .center {
