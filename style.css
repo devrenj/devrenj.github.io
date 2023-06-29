@@ -24,7 +24,8 @@ body{
 
   max-width:200px;
   max-height:150px;
-  object-fit: fill;
+  width: auto;
+  height: auto;
   
   
   margin-top: 30px;
@@ -44,9 +45,12 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
   font-family: sans-serif;
   color: black;
+}
+
+.space {
+  padding: 10px;
 }
 
 .centerBtn {
@@ -54,6 +58,12 @@ body{
   justify-content: center;
   align-items: center;
   padding-top: 10px;
+}
+
+.media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn {
