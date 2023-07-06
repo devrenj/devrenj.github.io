@@ -1,9 +1,20 @@
-html {
+  /* 
+  Este modelo é compartilhável, modificável e está comentado por Roberto Nóbrega (http://github.com/devrenj)
+  Caso queira aprender sobre estilização em CSS, acesse: https://www.cursoemvideo.com/curso/html5/
+  */
+
+  /* Design Responsivo do HTML (para que apareça corretamente em navegadores mobile) */
+  html {
   height: 100%;
 }
 
 body{
+  /* Using FreePik.com images */
+  /* Dentro de URL, mude o link entre 'aspas' para mudar a foto de fundo da página */
+  /* Observação: Se desejar usar cor solida, remova 'background-image:' e utilize 'background-color:' */
   background-image: url('https://img.freepik.com/fotos-gratis/fundo-de-produto-de-praia_53876-90146.jpg?w=740&t=st=1687983161~exp=1687983761~hmac=e4e79fc42a33fd463ffcd62bfe183d6fb359351ffe1f4fb1cae3130bbe9e78c5');
+
+  /* Design Responsivo do background (para que apareça corretamente em navegadores mobile) */
   background-position: top center;
   background-repeat:  no-repeat;
   background-attachment: fixed;
@@ -17,6 +28,8 @@ body{
   display: block;
 }
 
+  /* Atributos que estilizam as classes definidas nos elementos HTML */
+    /* início */
 .photo img { 
 
   display: flex;
@@ -72,9 +85,10 @@ body{
   border-radius: 100px;
   padding: 10px;
 }
+    /* fim */
 
-/* Button models and code taken from dextronet */
-
+  /*  Using Dextronet.com button models and codes */
+    /* Botão verde */
 .btn {
   height: 30px;
   width: 200px;
@@ -140,6 +154,7 @@ body{
   padding: 19px 45px 17px 45px;
 }
 
+    /* Botão azul */
 .btn2 {
   height: 30px;
   width: 200px;
