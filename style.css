@@ -12,8 +12,9 @@ body{
   /* Using FreePik.com images */
   /* Dentro de URL, mude o link entre 'aspas' para mudar a foto de fundo da página */
   /* Observação: Se desejar usar cor solida, remova 'background-image:' e utilize 'background-color:' */
-  background-image: url('https://img.freepik.com/fotos-gratis/fundo-de-produto-de-praia_53876-90146.jpg?w=740&t=st=1687983161~exp=1687983761~hmac=e4e79fc42a33fd463ffcd62bfe183d6fb359351ffe1f4fb1cae3130bbe9e78c5');
-
+  background-image: url('https://images.unsplash.com/photo-1530293959042-0aac487c21e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE4ODN8MHwxfHNlYXJjaHw2NjZ8fGJsdWUlMjB5ZWxsb3clMjBhY3J5bGljfGVufDB8fHx8MTY4NjU4MjY5MXww&ixlib=rb-4.0.3&q=80&w=1080');
+  /* Images taken from Unsplash.com */
+  
   /* Design Responsivo do background (para que apareça corretamente em navegadores mobile) */
   background-position: top center;
   background-repeat:  no-repeat;
