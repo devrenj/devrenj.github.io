@@ -2,11 +2,18 @@
   <!--Caso queira aprender sobre a linguagem de marcação HTML, acesse: https://www.cursoemvideo.com/curso/html5/-->
   <!--O conteúdo disposto é atualizado frequentemente. Acompanhe o desenvolvimento pelos Commits no GitHub-->
   <!DOCTYPE html>
-<html lang="pt-br">
+<div lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!--Configurações de compartilhamento-->
+  <meta property="og:url" content="http://www.renj.dev.br" />
+  <meta property="og:title" content="Roberto Nóbrega Jr." />
+  <meta property="og:image" content="https://drive.google.com/file/d/15TElw8csebsP-GEgSVN250bGpRoxYDfZ/view?usp=sharing" />
+  <meta property="og:description" content="Perfil profissional de desenvolvimento acadêmico" />
+  <meta name="theme-color" content="#add8e6">
 
   <!--Aqui estamos conectando o 'style.css' ao html, para estilizarmos a página em CSS-->
   <link rel="stylesheet" href="style.css">
@@ -17,23 +24,62 @@
   <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
 
   <!--Defina aqui o título da página-->
-  <title>DEV Roberto Edaes Jr</title>
+  <title>DEV Roberto Nóbrega Jr.</title>
 </head>
-<main>
 
   <!--Foto-->
 <div class="flex">  
-  <figure class="photo">
+  <figure class="foto">
     <!--Defina o link para a sua foto (entre "aspas")-->
     <img src="https://d2g5r6q74hb2rv.cloudfront.net/eyJidWNrZXQiOiJmbG93Y3YtaW1hZ2VzLXByb2QiLCJrZXkiOiJhdmF0YXIvVXp4SHY5NnNURnhTWUkwZGktWmdvLmpwZWciLCJlZGl0cyI6eyJncmF5c2NhbGUiOmZhbHNlLCJ3ZWJwIjp0cnVlLCJqcGVnIjp0cnVlLCJwbmciOmZhbHNlLCJleHRyYWN0Ijp7IndpZHRoIjozMDEsImhlaWdodCI6MzAxLCJ0b3AiOjE1MSwibGVmdCI6MjQ1fSwicmVzaXplIjp7IndpZHRoIjo2MDB9fX0=">
   </figure>
 </div>
 
 <!--Defina o seu nome-->
-<h2 class="flexTxt">Roberto Edaes Jr.</h2>
+<h2 class="textoFormatado">Roberto Nóbrega Jr.</h2>
 
 <!--Defina um subtitulo-->
-<p class="flexTxt">Perfil profissional</p>
+<p class="textoFormatado">Desenvolvimento FullStack</p>
+
+  <!--Ícones de Redes Sociais-->
+  <!-- Used icons8 icons templates -->
+
+<div class="backgroundRedesSociais">
+  <div class="redesSociais">
+
+    <!--Botão Pix-->
+    <div class="conteiner">        
+    <!--Crie um QRcode e o armazene em algum lugar, aponte para a URL"-->
+    <a href="https://tinyurl.com/qrcode-pix-roberto" target="_blank">
+          <img src="https://logospng.org/download/pix/logo-pix-icone-256.png" width="45" height="45" alt="SUPPORT ME! My Brazilian Transfer (Pix) Details" />
+    </a>
+  </div>
+
+    <!--Botão GitHub-->
+    <div class="conteiner">        
+    <!--Coloque seu link para o GitHub em "href"-->
+    <a href="https://github.com/devrenj/" target="_blank">
+          <img src="https://img.icons8.com/fluency/48/000000/github.png" alt="My GitHub profile" />
+    </a>
+  </div>
+
+    <!--Botão E-mail-->
+  <div class="conteiner">
+    <!--Mude o conteúdo dentro de "mailto:"-->
+    <a href="mailto:devrenjbr@gmail.com" target="_blank">
+          <img src="https://img.icons8.com/fluency/48/000000/mail.png" alt="Email-me" />
+    </a>
+  </div>
+
+  <!--Botão LinkedIN-->
+  <div class="conteiner">
+    <!--Coloque seu link para o LinkedIN em "href"-->
+    <a href="https://www.linkedin.com/in/devrenj/" target="_blank">
+          <img src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="My LinkedIN profile" />
+    </a>
+  </div>
+  </div>
+</div>
 
 <!--Botão para os Projetos-->
 <div class="flex">
@@ -48,45 +94,7 @@
 </div>
 
   <!--Espaço vazio, usado para estilização-->
-<div class="space"></div>
-
-  <!--Ícones de Redes Sociais-->
-  <!-- Used icons8 icons templates -->
-<div class="flexIcons">
-
-    <!--Botão GitHub-->
-    <div class="menu">        
-      <!--Coloque seu link para o GitHub em "href"-->
-    <a href="https://tinyurl.com/qrcode-pix-roberto" target="_blank">
-          <img src="https://logospng.org/download/pix/logo-pix-icone-256.png" width="45" height="45" alt="SUPPORT ME! My Brazilian Transfer (Pix) Details" />
-    </a>
-  </div>
-
-  <!--Botão GitHub-->
-  <div class="menu">        
-    <!--Coloque seu link para o GitHub em "href"-->
-  <a href="https://github.com/devrenj/" target="_blank">
-        <img src="https://img.icons8.com/fluency/48/000000/github.png" width="45" height="45" alt="My GitHub profile" />
-  </a>
-</div>
-
-  <!--Botão E-mail-->
-<div class="menu">
-    <!--Mude o conteúdo dentro de "mailto:"-->
-  <a href="mailto:devrenjbr@gmail.com" target="_blank">
-        <img src="https://img.icons8.com/fluency/48/000000/mail.png" width="45" height="45" alt="Email-me" />
-  </a>
-</div>
-
-<!--Botão LinkedIN-->
-<div class="menu">
-  <!--Coloque seu link para o LinkedIN em "href"-->
-  <a href="https://www.linkedin.com/in/devrenj/" target="_blank">
-        <img src="https://img.icons8.com/fluency/48/000000/linkedin.png" width="45" height="45" alt="My LinkedIN profile" />
-  </a>
-</div>
-
-</div>
+  <div class="espaco"></div>
 
 </main>
 </body>
