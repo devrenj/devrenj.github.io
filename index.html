@@ -1,102 +1,158 @@
-  <!--Este modelo é compartilhável, modificável e está comentado por Roberto Nóbrega (http://github.com/devrenj)-->
-  <!--Caso queira aprender sobre a linguagem de marcação HTML, acesse: https://www.cursoemvideo.com/curso/html5/-->
-  <!--O conteúdo disposto é atualizado frequentemente. Acompanhe o desenvolvimento pelos Commits no GitHub-->
-  <!DOCTYPE html>
+<!--Este modelo é compartilhável, modificável e está comentado por Roberto Nóbrega (http://github.com/devrenj)-->
+<!--Caso queira aprender sobre a linguagem de marcação HTML, acesse: https://www.cursoemvideo.com/curso/html5/-->
+<!--O conteúdo disposto é atualizado frequentemente. Acompanhe o desenvolvimento pelos Commits no GitHub-->
+<!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!--Configurações de compartilhamento-->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Roberto Nóbrega Jr." />
-  <meta property="og:description" content="Perfil profissional de desenvolvimento acadêmico" />
-  <meta property="og:url" content="http://www.renj.dev.br" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/devrenj/devrenj.github.io/main/1678917177849.jpg" />
-  <meta name="theme-color" content="#add8e6" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!--Aqui estamos conectando o 'style.css' ao html, para estilizarmos a página em CSS-->
-  <link rel="stylesheet" href="style.css">
-  
-  <!--GitHub official icons-->
-  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
-  <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
-  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+    <!--Configurações de compartilhamento-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Roberto Nóbrega Jr." />
+    <meta
+      property="og:description"
+      content="Perfil profissional de desenvolvimento acadêmico"
+    />
+    <meta property="og:url" content="http://www.renj.dev.br" />
+    <meta property="og:image" content="./src/images/photo.jpg" />
+    <meta name="theme-color" content="#add8e6" />
 
-  <!--Defina aqui o título da página-->
-  <title>DEV Roberto Nóbrega Jr.</title>
-</head>
+    <!-- RESET CSS: Retira a formatação padrão dos navegadores -->
+    <link rel="stylesheet" href="./src/styles/reset.css" />
 
-  <!--Foto-->
-<div class="flex">  
-  <figure class="foto">
-    <!--Defina o link para a sua foto (entre "aspas")-->
-    <img src="https://d2g5r6q74hb2rv.cloudfront.net/eyJidWNrZXQiOiJmbG93Y3YtaW1hZ2VzLXByb2QiLCJrZXkiOiJhdmF0YXIvVXp4SHY5NnNURnhTWUkwZGktWmdvLmpwZWciLCJlZGl0cyI6eyJncmF5c2NhbGUiOmZhbHNlLCJ3ZWJwIjp0cnVlLCJqcGVnIjp0cnVlLCJwbmciOmZhbHNlLCJleHRyYWN0Ijp7IndpZHRoIjozMDEsImhlaWdodCI6MzAxLCJ0b3AiOjE1MSwibGVmdCI6MjQ1fSwicmVzaXplIjp7IndpZHRoIjo2MDB9fX0=">
-  </figure>
-</div>
+    <!--Aqui estamos conectando o 'style.css' ao html, para estilizarmos a página em CSS-->
+    <link rel="stylesheet" href="./src/styles/style.css" />
 
-<!--Defina o seu nome-->
-<h2 class="textoFormatado">Roberto Nóbrega Jr.</h2>
+    <!--GitHub official icons-->
+    <link
+      rel="mask-icon"
+      href="https://github.githubassets.com/pinned-octocat.svg"
+      color="#000000"
+    />
+    <link
+      rel="alternate icon"
+      class="js-site-favicon"
+      type="image/png"
+      href="https://github.githubassets.com/favicons/favicon.png"
+    />
+    <link
+      rel="icon"
+      class="js-site-favicon"
+      type="image/svg+xml"
+      href="https://github.githubassets.com/favicons/favicon.svg"
+    />
 
-<!--Defina um subtitulo-->
-<p class="textoFormatado">Desenvolvimento FullStack</p>
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!--Ícones de Redes Sociais-->
-  <!-- Used icons8 icons templates -->
+    <!--Defina aqui o título da página-->
+    <title>Perfil DEV - Roberto Nóbrega Jr.</title>
+  </head>
+  <body>
+    <main class="flex">
+      <!--Foto-->
+      <div class="flex recuo">
+        <a href="https://github.com/devrenj/">
+          <!--Defina o link para a sua foto (entre "aspas")-->
+          <img class="foto" />
+        </a>
+      </div>
 
-<div class="backgroundRedesSociais">
-  <div class="redesSociais">
+      <section class="flex recuo">
+        <!--Defina o seu nome-->
+        <h2>Roberto Nóbrega Jr.</h2>
+        <!--Defina um subtitulo-->
+        <p class="recuo-p">Desenvolvimento FullStack</p>
+      </section>
 
-    <!--Botão Pix-->
-    <div class="conteiner">        
-    <!--Crie um QRcode e o armazene em algum lugar, aponte para a URL"-->
-    <a href="https://tinyurl.com/qrcode-pix-roberto" target="_blank">
-          <img src="https://logospng.org/download/pix/logo-pix-icone-256.png" width="45" height="45" alt="SUPPORT ME! My Brazilian Transfer (Pix) Details" />
-    </a>
-  </div>
+      <!--Ícones de Redes Sociais-->
+      <!-- Used icons8 icons templates -->
 
-    <!--Botão GitHub-->
-    <div class="conteiner">        
-    <!--Coloque seu link para o GitHub em "href"-->
-    <a href="https://github.com/devrenj/" target="_blank">
-          <img src="https://img.icons8.com/fluency/48/000000/github.png" alt="My GitHub profile" />
-    </a>
-  </div>
+      <div class="backgroundRedesSociais recuo-p">
+        <div class="redesSociais">
+          <!--Botão Pix-->
+          <div class="conteiner">
+            <!--Crie um QRcode e o armazene em algum lugar, aponte para a URL"-->
+            <a href="https://tinyurl.com/qrcode-pix-roberto" target="_blank">
+              <img
+                src="https://logospng.org/download/pix/logo-pix-icone-256.png"
+                width="45"
+                height="45"
+                alt="SUPPORT ME! My Brazilian Transfer (Pix) Details"
+              />
+            </a>
+          </div>
 
-    <!--Botão E-mail-->
-  <div class="conteiner">
-    <!--Mude o conteúdo dentro de "mailto:"-->
-    <a href="mailto:devrenjbr@gmail.com" target="_blank">
-          <img src="https://img.icons8.com/fluency/48/000000/mail.png" alt="Email-me" />
-    </a>
-  </div>
+          <!--Botão GitHub-->
+          <div class="conteiner">
+            <!--Coloque seu link para o GitHub em "href"-->
+            <a href="https://github.com/devrenj/" target="_blank">
+              <img
+                src="https://img.icons8.com/fluency/48/000000/github.png"
+                alt="My GitHub profile"
+              />
+            </a>
+          </div>
 
-  <!--Botão LinkedIN-->
-  <div class="conteiner">
-    <!--Coloque seu link para o LinkedIN em "href"-->
-    <a href="https://www.linkedin.com/in/devrenj/" target="_blank">
-          <img src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="My LinkedIN profile" />
-    </a>
-  </div>
-  </div>
-</div>
+          <!--Botão E-mail-->
+          <div class="conteiner">
+            <!--Mude o conteúdo dentro de "mailto:"-->
+            <a href="mailto:devrenjbr@gmail.com" target="_blank">
+              <img
+                src="https://img.icons8.com/fluency/48/000000/mail.png"
+                alt="Email-me"
+              />
+            </a>
+          </div>
 
-<!--Botão para os Projetos-->
-<div class="flex">
-  <a href="https://devrenj.github.io/devLib" class="btn2"><strong>Projetos</strong><br>BIBLIOTECA DE DESENVOLVIMENTO</a>
-</div>
+          <!--Botão LinkedIN-->
+          <div class="conteiner">
+            <!--Coloque seu link para o LinkedIN em "href"-->
+            <a href="https://www.linkedin.com/in/devrenj/" target="_blank">
+              <img
+                src="https://img.icons8.com/fluency/48/000000/linkedin.png"
+                alt="My LinkedIN profile"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-<!--Botão para o Currículo-->
-<div class="flex">
-  <!--Comentário: Recomendo este currículo do flowcv.io pois para atualizar tudo, basta você editá-lo direto-->
-  <!--no site, nesse 'href' você apenas precisa colar o link gerado para o seu currículo-->
-  <a href="https://flowcv.com/resume/15o0rhv67n" class="btn"><strong>Curriculum Vitae</strong><br>DESENVOLVEDOR DE SOFTWARE</a>
-</div>
+      <!--Botão para o projeto Run-->
+      <div class="flex recuo">
+        <a href="https://devrenj.github.io/devLib" class="btn2"
+          ><strong>DevLib</strong><br />BIBLIOTECA DE DESENVOLVIMENTO</a
+        >
+      </div>
 
-  <!--Espaço vazio, usado para estilização-->
-  <div class="espaco"></div>
+      <!--Botão para o projeto DevLib-->
+      <div class="flex recuo">
+        <a href="https://devrenj.github.io/devLib" class="btn2"
+          ><strong>Run</strong><br />Projetos executáveis</a
+        >
+      </div>
 
-</main>
-</body>
+      <!--Botão para o Currículo-->
+      <div class="flex recuo">
+        <!--Comentário: Recomendo este currículo do flowcv.io pois para atualizar tudo, basta você editá-lo direto-->
+        <!--no site, nesse 'href' você apenas precisa colar o link gerado para o seu currículo-->
+        <a href="https://flowcv.com/resume/15o0rhv67n" class="btn"
+          ><strong>Curriculum Vitae</strong><br />DESENVOLVEDOR DE SOFTWARE</a
+        >
+      </div>
+      <footer class="flex-end recuo">
+        Copyright (c) 2023 Roberto Nóbrega Jr. (<a
+          href="https://www.github.com/devrenj"
+          >@devrenj</a
+        >) under MIT License
+      </footer>
+    </main>
+  </body>
 </html>
