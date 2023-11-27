@@ -42,14 +42,14 @@ body {
   background-size: cover;
   width: auto;
   height: auto;
-  overflow: auto;
+  overflow: hidden;
   margin: auto;
 }
 
 /* Elementos alterados diretamente */
 
 main {
-  height: 98vh;
+  height: 100vh;
 }
 
 h2 {
@@ -61,6 +61,8 @@ footer {
   background: #00000020;
   width: 100%;
   font-size: small;
+  position: absolute;
+  bottom: 0;
 }
 
 /* Atributos que estilizam as classes definidas nos elementos HTML */
