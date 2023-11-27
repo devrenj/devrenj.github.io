@@ -22,6 +22,7 @@
   /* Fonte */
   font-family: 'Lato', sans-serif;
   color: #000;
+  box-sizing: border-box;
 }
 
 body {
@@ -42,11 +43,14 @@ body {
   width: auto;
   height: auto;
   overflow: auto;
-  display: block;
   margin: auto;
 }
 
 /* Elementos alterados diretamente */
+
+main {
+  height: 98vh;
+}
 
 h2 {
   font-weight: bold;
@@ -56,6 +60,7 @@ h2 {
 footer {
   background: #00000020;
   width: 100%;
+  font-size: small;
 }
 
 /* Atributos que estilizam as classes definidas nos elementos HTML */
@@ -150,9 +155,8 @@ footer {
 /*  Using Dextronet.com button models and codes */
 /* Botão verde */
 .btn {
-  height: 30px;
-  width: 200px;
-  display: inline-block;
+  height: fit-content;
+  width: fit-content;
   text-align: center;
   border-width: 1px;
   border-style: solid;
@@ -273,9 +277,8 @@ footer {
 
 /* Botão azul */
 .btn2 {
-  height: 30px;
-  width: 200px;
-  display: inline-block;
+  height: fit-content;
+  width: fit-content;
   text-align: center;
   border-width: 1px;
   border-style: solid;
