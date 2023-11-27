@@ -43,7 +43,7 @@ body {
   width: auto;
   height: auto;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   margin: auto;
 }
 
@@ -158,8 +158,8 @@ footer {
 /*  Using Dextronet.com button models and codes */
 /* Botão verde */
 .btn {
-  height: fit-content;
-  width: fit-content;
+  height: 4.5rem;
+  width: 18rem;
   text-align: center;
   border-width: 1px;
   border-style: solid;
@@ -280,8 +280,8 @@ footer {
 
 /* Botão azul */
 .btn2 {
-  height: fit-content;
-  width: fit-content;
+  height: 4.5rem;
+  width: 18rem;
   text-align: center;
   border-width: 1px;
   border-style: solid;
