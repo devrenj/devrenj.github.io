@@ -42,6 +42,7 @@ body {
   background-size: cover;
   width: auto;
   height: auto;
+  min-height: 100vh;
   overflow: hidden;
   margin: auto;
 }
