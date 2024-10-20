@@ -1,399 +1,406 @@
-/* 
-  Este modelo é compartilhável, modificável e está comentado por Roberto Nóbrega (http://github.com/devrenj)
-  Caso queira aprender sobre estilização em CSS, acesse: https://www.cursoemvideo.com/curso/html5/  
-  */
+/* Importando fonte */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/*
 
-/* Design Responsivo do HTML (para que apareça corretamente em navegadores mobile) */
-/*  html {
-    height: 100%;
-}
+  Este modelo é compartilhável, modificável e está comentado por Roberto Nóbrega Jr. (http://github.com/devrenj)
+  Caso queira aprender sobre estilização em CSS, acesse: https://www.cursoemvideo.com/curso/html5/  
 */
 
-/* Testes */
-/* .lorem {
-  height: 350px;
+/* Definindo variáveis para uso no restante do CSS */
+:root {
+  /* Caminhos das suas imagens */
+  --perfil-github: url('https://github.com/devrenj.png');
+  --bg: url('../images/bg.jpg');
+
+  /* Ícones */
+  --icon-pix: url('https://img.icons8.com/fluency/40/pix.png');
+  --icon-github: url('https://img.icons8.com/fluency/40/000000/github.png');
+  --icon-email: url('https://img.icons8.com/fluency/40/000000/mail.png');
+  --icon-linkedin: url('https://img.icons8.com/fluency/40/000000/linkedin.png');
+  --icon-instagram: url('https://img.icons8.com/fluency/40/instagram-new.png');
+  --icon-compartilhar: url('https://img.icons8.com/external-others-inmotus-design/40/external-Link-round-icons-others-inmotus-design-5.png');
+
+  /* Paleta de cores do projeto */
+  --preto: #000;
+  --branco: #fff;
+  --roxo: #9c00cc;
+  --roxo80: #9c00cc80;
+  --verde: #00cc00;
+  --verde80: #00cc0080;
+  --azul: #0058cc;
+  --azul80: #0058cc80;
+  --azul-claro: #00d4ff;
+  --azul-claro80: #00d4ff80;
+  --azul-claro33: #00d4ff33;
+  --azul-claro50: #00d4ff50;
+  --azul-claro-transparente: #00d4ff4d;
+  --gelo: #add8e6;
+  --cinza: #525252;
+  --cinza-claro: #cecece;
+  --preto20: #00000020;
+  --preto25: #00000025;
+  --preto50: #00000050;
+  --preto70: #ffffffb3;
+  --transparente: #ffffff00;
+
+  /* Design System */
+  --borda-solida: var(--azul-claro);
+  --borda-cinza: var(--cinza-claro);
+  --borda: var(--cinza-claro)
+  --fundo-claro: var(--azul-claro50);
+  --fundo-claro-transparente: var(--azul-claro-transparente);
+  --sombra: var(--preto25);
+  --transparencia: var(--preto20);
+  --transparencia-modal: var(--preto70);
+  --titulo: var(--cinza);
 }
 
-.main {
-  border: 1px solid #000;
-} */
+/* Estilos extras ao Bootstrap */
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bd-black-bg);
+  --bs-tooltip-color: var(--bs-white);
+}
 
+/* Compatibilidade filter blur */
+.no-backdrop-support {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Media Queries */
+@media (max-width: 320px) {
+  .modal-body ul li, .redes-sociais ul li {
+    width: 45px !important;
+    height: 45px !important;
+    margin: 1px !important;
+  }
+
+  .nav-btn, .modal-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  #copiar {
+    padding: 9px;
+  }
+}
+
+/* Estilo para todos os elementos */
 * {
-  /* Fonte */
+  /* Somando os espaços extras dos elementos ao tamanho total */
+  box-sizing: border-box;
+
+  /* Resetando margin e padding */
+  margin: 0;
+  padding: 0;
+
+  /* Use para depuração */
+  /* outline: 1px solid red; */
+}
+
+/* Estilo para o HTML e Body */
+html {
+  height: 100vh;
+}
+
+html,
+body {
+  /* Aplicando fonte personalizada */
   font-family: 'Lato', sans-serif;
   color: #000;
-  box-sizing: border-box;
+  height: 100%;
 }
 
+/* Estilo do Body */
 body {
-  /* Using FreePik.com images */
-  /* Dentro de URL, mude o link entre 'aspas' para mudar a foto de fundo da página */
-  /* Observação: Se desejar usar cor solida, remova 'background-image:' e utilize 'background-color:' */
-  background-image: url('../images/bg.jpg');
-  /* Images taken from Unsplash.com */
-
-  /* Design Responsivo do background (para que apareça corretamente em navegadores mobile) */
-  background-position: top center;
+  /* Usando imagem de fundo */
+  background-image: var(--bg);
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width: auto;
-  height: auto;
-  min-height: 100vh;
-  overflow: hidden;
-  margin: auto;
 }
 
-/* Elementos alterados diretamente */
-
-main {
-  height: 100vh;
-}
-
-h2 {
-  font-weight: bold;
-  font-size: x-large;
-}
-
+/* Estilo do Footer */
 footer {
-  background: #00000020;
-  width: 100%;
-  font-size: small;
-  position: absolute;
-  bottom: 0;
+  text-transform: uppercase;
+  color: var(--titulo-claro);
+  background: var(--transparencia);
+  font-size: 12px;
+  letter-spacing: .1rem;
 }
 
-/* Atributos que estilizam as classes definidas nos elementos HTML */
-/* início */
-.recuo {
-  margin-top: 1.25rem;
+ul li {
+  margin: 0 2px !important;
+  padding: 0 !important;
 }
 
-.recuo-p {
-  margin-top: 0.5rem;
-}
-
-.recuo-g {
-  margin-top: 1.75rem;
-}
-
-.foto {
-  width: 200px;
-  height: 200px;
-  border: 2px solid #add8e6;
-  border-radius: 100%;
-  background: url('https://d2g5r6q74hb2rv.cloudfront.net/eyJidWNrZXQiOiJmbG93Y3YtaW1hZ2VzLXByb2QiLCJrZXkiOiJhdmF0YXIvVXp4SHY5NnNURnhTWUkwZGktWmdvLmpwZWciLCJlZGl0cyI6eyJncmF5c2NhbGUiOmZhbHNlLCJ3ZWJwIjp0cnVlLCJqcGVnIjp0cnVlLCJwbmciOmZhbHNlLCJleHRyYWN0Ijp7IndpZHRoIjozMDEsImhlaWdodCI6MzAxLCJ0b3AiOjE1MSwibGVmdCI6MjQ1fSwicmVzaXplIjp7IndpZHRoIjo2MDB9fX0=');
-  background-size: contain;
+/* Estilo para Foto do Perfil */
+.foto[data="foto"] {
+  background-image: var(--perfil-github);
+  background-size: cover;
+  background-position: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 100px;
+  border: 2px solid var(--borda-solida);
   transition: 0.6s;
 }
-.foto:hover {
+
+/* Efeito de hover para a Foto do Perfil */
+.foto[data="foto"]:hover {
   border-radius: 10px;
   transform: scale(1.1);
   transition: ease 0.6s;
 }
 
-.flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Estilos para a seção de redes sociais */
+.redes-sociais {
+  background: var(--branco);
+  background: linear-gradient(90deg,
+      var(--transparente) 0%,
+      var(--azul-claro-transparente) 10%,
+      var(--azul-claro33) 50%,
+      var(--azul-claro-transparente) 90%,
+      var(--transparente) 100%);
 }
 
-.flex-end {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+
+/* Estilo dos ícones das redes sociais */
+.redes-sociais ul li {
+  width: 48px;
+  height: 48px;
 }
 
-.backgroundRedesSociais {
-  width: 100%;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 212, 255, 0.3) 10%,
-    rgba(0, 212, 255, 0.2) 50%,
-    rgba(0, 212, 255, 0.3) 90%,
-    rgba(255, 255, 255, 1) 100%
-  );
+/* Estilo especial do botão de copiar */
+#copiar {
+  padding: 9px !important;
+  margin: 0;
 }
 
-.redesSociais {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Estilo especial do botão de compartilhar, corrige um problema do svg */
+#compartilhar {
+  margin-left: 1px;
 }
 
-.centerBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px;
-}
-
-.conteiner {
-  margin: 0.5rem;
-  transition: 0.4s;
-}
-
-.conteiner:hover {
-  content: 'ler mais';
-  background-color: rgba(55, 242, 255, 0.5);
-  transition: 0.4s;
-}
-
-.conteiner img {
-  background-color: #ffffff;
-  border: 1px solid #add8e6;
-  border-radius: 100%;
-  margin: auto;
-  padding: 4px;
+/* Estilo dos ícones */
+.nav-btn, .modal-btn {
   width: 45px;
   height: 45px;
-  margin: 5px;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  margin: 0;
+  padding: 3px;
+  cursor: pointer;
 }
 
-/*  Using Dextronet.com button models and codes */
-/* Botão verde */
-.btn {
-  height: 4.5rem;
-  width: 18rem;
-  text-align: center;
-  border-width: 1px;
-  border-style: solid;
-  text-transform: none;
-  text-decoration: none;
-  line-height: 1.1;
+.modal-body ul li, .redes-sociais ul li {
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--borda-solida);
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+/* Efeito de hover para os ícones */
+.modal-body ul li:hover, .redes-sociais ul li:hover {
+  background-color: var(--fundo-claro-transparente);
+  border: 1px solid var(--borda-cinza);
+  box-shadow: var(--sombra) 0 8px 15px;
+  transform: translateY(-2px);
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+/* Estilos para botões de projetos */
+.botoes-projetos {
+  gap: 1.5rem;
+}
+
+/* Estilos para botões em geral */
+.botao-menu {
+  appearance: none;
+  background-image: linear-gradient(var(--azul-claro33), var(--branco));
+  border: 2px solid var(--borda-solida);
+  border-radius: 10px;
+  color: var(--titulo);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
   font-weight: bold;
-  /* font-family: roboto, Arial, Helvetica, sans-serif; */
-  color: #ffffff;
-  font-size: 10px;
-  background-color: #6db000;
-  background-image: -webkit-linear-gradient(
-    top,
-    #70b500 0%,
-    #81c316 48%,
-    #6db000 49%,
-    #6db000 82%,
-    #7ecc00 100%
-  );
-  background-image: -moz-linear-gradient(
-    top,
-    #70b500 0%,
-    #81c316 48%,
-    #6db000 49%,
-    #6db000 82%,
-    #7ecc00 100%
-  );
-  background-image: -o-linear-gradient(
-    top,
-    #70b500 0%,
-    #81c316 48%,
-    #6db000 49%,
-    #6db000 82%,
-    #7ecc00 100%
-  );
-  background-image: linear-gradient(
-    top,
-    #70b500 0%,
-    #81c316 48%,
-    #6db000 49%,
-    #6db000 82%,
-    #7ecc00 100%
-  );
-  border-color: hsl(83, 45%, 35%);
-  -webkit-box-shadow: inset 0 0 1px 1px #8de300, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0 0 1px 1px #8de300, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 0 1px 1px #8de300, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  -webkit-text-shadow: 1px 1px 1px #2e4a00;
-  -moz-text-shadow: 1px 1px 1px #2e4a00;
-  -o-text-shadow: 1px 1px 1px #2e4a00;
-  text-shadow: 1px 1px 1px #2e4a00;
-  -webkit-border-radius: 21px;
-  -moz-border-radius: 21px;
-  border-radius: 21px;
-  padding: 18px 45px 18px 45px;
-}
-
-.btn strong {
-  color: #fff;
-  letter-spacing: 1px;
-  font-size: 22px;
-}
-
-.btn:hover {
-  color: #ffffff;
-  background-color: #76bf00;
-  background-image: -webkit-linear-gradient(
-    top,
-    #79c400 0%,
-    #8ad117 48%,
-    #76bf00 49%,
-    #76bf00 82%,
-    #87db00 100%
-  );
-  background-image: -moz-linear-gradient(
-    top,
-    #79c400 0%,
-    #8ad117 48%,
-    #76bf00 49%,
-    #76bf00 82%,
-    #87db00 100%
-  );
-  background-image: -o-linear-gradient(
-    top,
-    #79c400 0%,
-    #8ad117 48%,
-    #76bf00 49%,
-    #76bf00 82%,
-    #87db00 100%
-  );
-  background-image: linear-gradient(
-    top,
-    #79c400 0%,
-    #8ad117 48%,
-    #76bf00 49%,
-    #76bf00 82%,
-    #87db00 100%
-  );
-  border-color: hsl(83, 43%, 33%);
-  -webkit-box-shadow: inset 0 0 1px 1px #9cfc00, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0 0 1px 1px #9cfc00, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 0 1px 1px #9cfc00, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  -webkit-text-shadow: 1px 1px 1px #375900;
-  -moz-text-shadow: 1px 1px 1px #375900;
-  -o-text-shadow: 1px 1px 1px #375900;
-  text-shadow: 1px 1px 1px #375900;
-}
-
-.btn:active {
-  color: #ffffff;
-  background-color: #63a100;
-  background-image: -webkit-linear-gradient(top, #5d9700 0%, #6db000 100%);
-  background-image: -moz-linear-gradient(top, #5d9700 0%, #6db000 100%);
-  background-image: -o-linear-gradient(top, #5d9700 0%, #6db000 100%);
-  background-image: linear-gradient(top, #5d9700 0%, #6db000 100%);
-  padding: 19px 45px 17px 45px;
-}
-
-/* Botão azul */
-.btn2 {
-  height: 4.5rem;
-  width: 18rem;
+  min-height: 60px;
+  width: 300px;
+  outline: none;
   text-align: center;
-  border-width: 1px;
-  border-style: solid;
-  text-transform: none;
   text-decoration: none;
-  line-height: 1.1;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  max-width: 100%;
+  will-change: transform;
+}
+
+/* Estilo de botões desabilitados */
+.botao-menu:disabled {
+  pointer-events: none;
+}
+
+/* Efeito de hover para botões */
+.botao-menu:hover {
+  color: var(--preto);
+  box-shadow: var(--sombra) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+/* Efeito de clique para botões */
+.botao-menu:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* Cores dos botões */
+/* Efeitos de hover para botões coloridos */
+.botao-roxo:hover {
+  border: 2px solid var(--roxo);
+  background-image: linear-gradient(var(--branco), var(--roxo80));
+}
+
+/* Efeitos de hover para botões coloridos (continuação) */
+.botao-verde:hover {
+  border: 2px solid var(--verde);
+  background-image: linear-gradient(var(--branco), var(--verde80));
+}
+
+.botao-azul:hover {
+  border: 2px solid var(--azul);
+  background-image: linear-gradient(var(--branco), var(--azul80));
+}
+
+.botao-azul-claro:hover {
+  border: 2px solid var(--borda-solida);
+  background-image: linear-gradient(var(--branco), var(--azul-claro80));
+}
+
+/* Estilo do título do botão */
+.titulo-botao {
+  color: var(--branco);
+  text-shadow: var(--preto) 1px 1px 1px;
+  -webkit-text-stroke: .2px #3B3B3B;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+/* Estilo da descrição do botão */
+.descricao {
+  color: var(--titulo);
+  font-size: 11px;
+  text-transform: uppercase;
+  text-shadow: var(--titulo-claro) 1px 1px 1px;
+}
+
+/* Modal */
+/* Estilo do modal */
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: var(--preto50);
+  height: 100vh;
+}
+
+.modal-content {
+  background-color: var(--transparencia-modal);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: var(--borda-solida) !important;
+  border-width: 2px !important;
+}
+
+/* modal-btn {
+  background-color: var(--branco);
+  border: 1px solid var(--gelo);
+}
+
+.modal-btn {
+  background-color: var(--branco);
+  border: 1px solid var(--gelo);
+  border-radius: 50px;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  margin: 0;
+}
+.modal-btn:hover {
+  background-color: var(--branco);
+  border: 1px solid var(--gelo);
+  color: var(--preto);
+  box-shadow: var(--sombra) 0 8px 15px;
+  transform: translateY(-2px);
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+} */
+
+/* .modal-content ul li {
+  background-color: var(--azul-claro33);
+  border: 1px solid var(--gelo);
+  border-radius: 50px;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  margin: 0;
+} */
+
+/* .modal-content ul li:hover {
+  color: var(--preto);
+  box-shadow: var(--sombra) 0 8px 15px;
+  transform: translateY(-2px);
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+} */
+
+.modal-header {
+  border-color: var(--borda-solida) !important;
+  color: var(--titulo);
+}
+
+.modal-content ul li {
+  border-color: var(--borda-solida) !important;
+  border-width: 2px !important;
+  border-radius: 50px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
   font-weight: bold;
-  /* font-family: roboto, Arial, Helvetica, sans-serif; */
-  color: #ffffff;
-  font-size: 10px;
-  background-color: #006bcf;
-  background-image: -webkit-linear-gradient(
-    top,
-    #006ed4 0%,
-    #197fdf 48%,
-    #006bcf 49%,
-    #006bcf 82%,
-    #0079eb 100%
-  );
-  background-image: -moz-linear-gradient(
-    top,
-    #006ed4 0%,
-    #197fdf 48%,
-    #006bcf 49%,
-    #006bcf 82%,
-    #0079eb 100%
-  );
-  background-image: -o-linear-gradient(
-    top,
-    #006ed4 0%,
-    #197fdf 48%,
-    #006bcf 49%,
-    #006bcf 82%,
-    #0079eb 100%
-  );
-  background-image: linear-gradient(
-    top,
-    #006ed4 0%,
-    #197fdf 48%,
-    #006bcf 49%,
-    #006bcf 82%,
-    #0079eb 100%
-  );
-  border-color: hsl(209, 40%, 41%);
-  -webkit-box-shadow: inset 0 0 1px 1px #1c92ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0 0 1px 1px #1c92ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 0 1px 1px #1c92ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  -webkit-text-shadow: 1px 1px 1px #003669;
-  -moz-text-shadow: 1px 1px 1px #003669;
-  -o-text-shadow: 1px 1px 1px #003669;
-  text-shadow: 1px 1px 1px #003669;
-  border-radius: 21px;
-  padding: 18px 45px 18px 45px;
 }
 
-.btn2 strong {
-  color: #fff;
-  letter-spacing: 1px;
-  font-size: 22px;
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.btn2:hover {
-  color: #ffffff;
-  background-color: #0073de;
-  background-image: -webkit-linear-gradient(
-    top,
-    #0076e3 0%,
-    #2087e6 48%,
-    #0073de 49%,
-    #0073de 82%,
-    #0082fa 100%
-  );
-  background-image: -moz-linear-gradient(
-    top,
-    #0076e3 0%,
-    #2087e6 48%,
-    #0073de 49%,
-    #0073de 82%,
-    #0082fa 100%
-  );
-  background-image: -o-linear-gradient(
-    top,
-    #0076e3 0%,
-    #2087e6 48%,
-    #0073de 49%,
-    #0073de 82%,
-    #0082fa 100%
-  );
-  background-image: linear-gradient(
-    top,
-    #0076e3 0%,
-    #2087e6 48%,
-    #0073de 49%,
-    #0073de 82%,
-    #0082fa 100%
-  );
-  border-color: hsl(209, 41%, 44%);
-  -webkit-box-shadow: inset 0 0 1px 1px #2697ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0 0 1px 1px #2697ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 0 1px 1px #2697ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-  -webkit-text-shadow: 1px 1px 1px #003e78;
-  -moz-text-shadow: 1px 1px 1px #003e78;
-  -o-text-shadow: 1px 1px 1px #003e78;
-  text-shadow: 1px 1px 1px #003e78;
+/* Estilo do Sweet Alert */
+.swal-modal {
+  background-color: var(--transparencia-modal);
+  border: 2px solid var(--borda-solida);
+  border-radius: .5rem;
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.btn2:active {
-  color: #ffffff;
-  background-color: #0063c0;
-  background-image: -webkit-linear-gradient(top, #005eb6 0%, #006bcf 100%);
-  background-image: -moz-linear-gradient(top, #005eb6 0%, #006bcf 100%);
-  background-image: -o-linear-gradient(top, #005eb6 0%, #006bcf 100%);
-  background-image: linear-gradient(top, #005eb6 0%, #006bcf 100%);
-  padding: 19px 45px 17px 45px;
+.swal-overlay {
+  background-color: var(--transparencia);
+  overflow: hidden !important;
 }
+
+.swal-icon::before, .swal-icon::before , .swal-icon--success:after, .swal-icon--success__hide-corners {
+  background-color: transparent;
+}
+
+.swal-icon {
+  background-color: var(--branco);
+}
+
+.swal-text {
+  color: var(--titulo);
+}
+
+/* Fim */
