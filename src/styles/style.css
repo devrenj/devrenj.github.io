@@ -55,6 +55,11 @@
   --titulo: var(--cinza);
 }
 
+/* Compatibilidade com Safari */
+.row:before, .row:after {
+  display: flex !important;
+}
+
 /* Estilos extras ao Bootstrap */
 .custom-tooltip {
   --bs-tooltip-bg: var(--bd-black-bg);
