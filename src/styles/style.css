@@ -388,7 +388,7 @@ ul li {
   border: 2px solid var(--borda-solida);
   border-radius: .5rem;
   /* backdrop-filter: blur(2.5px); */
-  /* -webkit-backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */ /* teste */
 }
 
 .swal-overlay {
