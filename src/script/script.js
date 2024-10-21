@@ -224,18 +224,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Funções de Depuração
-  // document.onclick = (e) => {
-  //   e.preventDefault()
-  //     e.target.style.display = "none";
-  // }
+  document.onclick = (e) => {
+    e.preventDefault()
+    alert(e.target)
+    // e.target.style.display = "none";
+  }
 
   // Botão de teste
   const teste = document.querySelector('#teste');
   teste.onclick = () => {
   // let vezes = 0;
-  // console.log('Teste pressionado', vezes);
+    console.log('Teste pressionado', vezes);
   // vezes++;
-    alert(1)
     alertar('Hello World!', 'Ok', 'success');
   }
 });
