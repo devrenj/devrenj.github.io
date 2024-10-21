@@ -1,9 +1,6 @@
-alert('alert.js 3')
+alert('alert.js 4')
 
-let vezes = 0;
-document.addEventListener('touchstart', () => {
-  alert('touchstart', vezes)
-})
-document.addEventListener('click', () => {
-  alert('click', vezes)
+const compartilhar = document.querySelector('#compartilhar') 
+compartilhar.addEventListener('click', (e) => {
+  alert(`click ${e.target}`)
 })
