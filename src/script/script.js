@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
   // Compatibilidade da propriedade filter (blur)
   if (!CSS.supports('backdrop-filter', 'blur(2.5px)')) {
     document
@@ -238,4 +237,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // vezes++;
     alertar('Hello World!', 'Ok', 'success');
   }
-});
