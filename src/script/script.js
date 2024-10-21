@@ -197,14 +197,14 @@ alert('Script.js 1');
   }
 
   // Quando o usuário clicar no 'X', feche o modal
-  closeBtn.onclick = () => {
+  closeBtn.addEventListener('click', () => {
     shareModal.toggle();
     reabilitarTooltipCompartilhar();
-  };
-  modal.onclick = () => {
+  })
+  modal.addEventListener('click', () => {
     shareModal.toggle();
     reabilitarTooltipCompartilhar();
-  };
+  })
 
   // Funções do Sweet Alert - Cria alertas dependendo do evento disparado
   // texto: mostra uma mensagem, precisa ser uma "string"
