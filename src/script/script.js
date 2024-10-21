@@ -6,7 +6,7 @@ alert('Script.js Funcionando!');
     document
       .querySelector('.modal-content')
       .classList.add('no-backdrop-support');
-    document.querySelector('.swal-modal').classList.add('no-backdrop-support');
+      // document.querySelector('.swal-modal').classList.add('no-backdrop-support');
   }
 
   // Funções do Bootstrap 5

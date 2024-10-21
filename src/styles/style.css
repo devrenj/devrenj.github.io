@@ -56,9 +56,12 @@
 }
 
 /* Compatibilidade com Safari */
-.row:before, .row:after {
-  display: flex !important;
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) { 
+     /* Código específico para Safari */ 
+  }
 }
+
 
 /* Estilos extras ao Bootstrap */
 .custom-tooltip {
