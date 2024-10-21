@@ -67,9 +67,9 @@
 }
 
 /* Compatibilidade filter blur */
-.no-backdrop-support {
+/* .no-backdrop-support {
   background-color: rgba(255, 255, 255, 0.9);
-}
+} */
 
 /* Media Queries */
 @media (max-width: 320px) {
@@ -315,8 +315,8 @@ ul li {
 
 .modal-content {
   background-color: var(--transparencia-modal);
-  backdrop-filter: blur(2.5px);
-  -webkit-backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(2.5px); */
+  /* -webkit-backdrop-filter: blur(10px); */
   border-color: var(--borda-solida) !important;
   border-width: 2px !important;
 }
@@ -387,8 +387,8 @@ ul li {
   background-color: var(--transparencia-modal);
   border: 2px solid var(--borda-solida);
   border-radius: .5rem;
-  backdrop-filter: blur(2.5px);
-  -webkit-backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(2.5px); */
+  /* -webkit-backdrop-filter: blur(10px); */
 }
 
 .swal-overlay {

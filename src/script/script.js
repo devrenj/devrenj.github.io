@@ -18,7 +18,6 @@ alert('Script.js Funcionando!');
       keyboard: true,
     })
   );
-  shareModal.show();
 
   var tooltipTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -42,8 +41,9 @@ alert('Script.js Funcionando!');
   }
 
   btnCompartilhar.addEventListener('click', () => {
-    shareModal.toggle();
-    tooltipCompartilhar.dispose();
+    abrirPagina('whatsapp', links.whatsapp, '_blank');  
+    // shareModal.toggle();
+    // tooltipCompartilhar.dispose();
   });
 
   const closeBtn = document.querySelector('.btn-close');
