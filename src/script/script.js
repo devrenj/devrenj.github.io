@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-alert('Script.js Funcionando!');
   // Compatibilidade da propriedade filter (blur)
   if (!CSS.supports('backdrop-filter', 'blur(2.5px)')) {
     document
