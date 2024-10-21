@@ -69,6 +69,13 @@
   --bs-tooltip-color: var(--bs-white);
 }
 
+@media (max-width: 320px) {
+  .rounded {
+    border-radius: 0 !important;
+  }
+}
+
+
 /* Compatibilidade filter blur */
 .no-backdrop-support {
   background-color: rgba(255, 255, 255, 0.9);
@@ -92,11 +99,18 @@
   }
 }
 
+@media (max-width: 576px) {
+  #bandeira-estado, #bandeira-pais {
+    width: 18px !important;
+    height: 12px !important;
+  }
+}
+
 /* Estilo para todos os elementos */
 * {
   /* Somando os espaços extras dos elementos ao tamanho total */
   box-sizing: border-box;
-
+  cursor: default;
   /* Resetando margin e padding */
   margin: 0;
   padding: 0;
@@ -152,16 +166,17 @@ ul li {
   background-position: center;
   width: 170px;
   height: 170px;
-  border-radius: 100px;
   border: 2px solid var(--borda-solida);
   transition: 0.6s;
 }
 
-/* Efeito de hover para a Foto do Perfil */
-.foto[data="foto"]:hover {
-  border-radius: 10px;
-  transform: scale(1.1);
-  transition: ease 0.6s;
+/* Efeito de hover para os ícones */
+.modal-body ul li:hover, .redes-sociais ul li:hover, .foto[data="foto"]:hover {
+  background-color: var(--fundo-claro-transparente);
+  border: 1px solid var(--borda-cinza);
+  box-shadow: var(--sombra) 0 8px 15px;
+  transform: translateY(-2px);
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
 }
 
 /* Estilos para a seção de redes sociais */
@@ -213,15 +228,6 @@ ul li {
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
 }
 
-/* Efeito de hover para os ícones */
-.modal-body ul li:hover, .redes-sociais ul li:hover {
-  background-color: var(--fundo-claro-transparente);
-  border: 1px solid var(--borda-cinza);
-  box-shadow: var(--sombra) 0 8px 15px;
-  transform: translateY(-2px);
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-}
-
 /* Estilos para botões de projetos */
 .botoes-projetos {
   gap: 1.5rem;
@@ -263,8 +269,8 @@ ul li {
 
 /* Efeito de clique para botões */
 .botao-menu:active {
-  box-shadow: none;
-  transform: translateY(0);
+  background-color: var(--fundo-claro-transparente);
+  border: 1px solid var(--borda-cinza);
 }
 
 /* Cores dos botões */
@@ -324,42 +330,6 @@ ul li {
   border-width: 2px !important;
 }
 
-/* modal-btn {
-  background-color: var(--branco);
-  border: 1px solid var(--gelo);
-}
-
-.modal-btn {
-  background-color: var(--branco);
-  border: 1px solid var(--gelo);
-  border-radius: 50px;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  margin: 0;
-}
-.modal-btn:hover {
-  background-color: var(--branco);
-  border: 1px solid var(--gelo);
-  color: var(--preto);
-  box-shadow: var(--sombra) 0 8px 15px;
-  transform: translateY(-2px);
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-} */
-
-/* .modal-content ul li {
-  background-color: var(--azul-claro33);
-  border: 1px solid var(--gelo);
-  border-radius: 50px;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  margin: 0;
-} */
-
-/* .modal-content ul li:hover {
-  color: var(--preto);
-  box-shadow: var(--sombra) 0 8px 15px;
-  transform: translateY(-2px);
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-} */
-
 .modal-header {
   border-color: var(--borda-solida) !important;
   color: var(--titulo);
@@ -409,6 +379,22 @@ ul li {
 
 .swal-text {
   color: var(--titulo);
+}
+
+.tecnologias {
+  max-width: 400px;
+}
+
+#bandeira-estado, #bandeira-pais {
+  box-sizing: border-box;
+  width: 24px;
+  height: 20px;
+  display: none;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+  /* background-color: #000; */
+  border: 0.5px solid #000;
 }
 
 /* Fim */

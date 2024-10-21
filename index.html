@@ -49,7 +49,7 @@
       <div class="modal-dialog modal-dialog-centered pb-5">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title" id="modalLabel">Compartilhar</h3>
+            <h3 class="modal-title" id="modalLabel">Compartilhar nas redes</h3>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body d-flex align-items-center justify-content-center w-100 p-2 my-4">
@@ -92,22 +92,39 @@
 
     <!-- Conteiner principal -->
     <!--Foto-->
-    <header>
+    <header class="my-0 my-md-2 d-md-flex flex-md-row justify-content-md-center">
       <div class="mt-2 d-flex justify-content-center">
         <a href="https://github.com/devrenj"> <!-- MODIFICAR para seu perfil do GitHub -->
-          <button class="foto" data="foto" aria-label="Eu 😁" data-bs-toggle="tooltip" data-bs-placement="bottom"
-          data-bs-title="Eu 😁"></button>
+          <button class="foto rounded-circle mx-md-3" data="foto" aria-label="Eu 😁" data-bs-toggle="tooltip"
+            data-bs-placement="bottom" data-bs-title="Eu 😁"></button>
         </a>
       </div>
 
-      <section class="my-2 my-md-4 d-flex flex-column justify-content-center align-items-center">
+      <section class=" p-2 my-2 my-md-4 d-flex flex-column justify-content-center align-items-center">
         <!--Defina o seu nome-->
-        <h3 class="fw-bold">Roberto Nóbrega Jr.</h3> <!-- MODIFICAR para seu nome -->
+        <div class="d-flex flex-row">
+          <h3 class="fw-bold fs-sm-5">Roberto Nóbrega Jr.</h3> <!-- MODIFICAR para seu nome -->
+          <div class="d-flex flex-column flex-sm-row ms-2">
+            <img id="bandeira-pais" src title alt="Bandeira do País"></img><img id="bandeira-estado" src title alt="Bandeira do Estado" title="Bandeira do Estado"></img>
+          </div>
+        </div>
+        <!-- MODIFICAR defina seu país no src da img bandeira-pais -->
         <!--Defina um subtitulo-->
-        <p class="lead my-0">Desenvolvedor Front-end</p> <!-- MODIFICAR para sua especialidade -->
+        <p class="lead my-0 fs-sm-6">Desenvolvedor Front-end</p> <!-- MODIFICAR para sua especialidade -->
+        
+        <!-- Tecnologias desenvolvidas -->
+        <section class="my-2 my-md-4 d-flex flex-column justify-content-center align-items-center">
+          <img class="w-100 mx-auto d-block tecnologias"
+            src="https://skillicons.dev/icons?i=vscode,figma,html,css,javascript,bootstrap,nodejs,nextjs,react,npm,git,md,postgresql&theme=light"
+            aria-label="Tecnologias que desenvolvo" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-title="Tecnologias que desenvolvo">
+          <!-- MODIFICAR para as suas tecnologias desenvolvidas (separando por virgula) -->
+        </section>
       </section>
 
     </header>
+
+
 
     <!--Botão de testes, ative caso necessário testar alguma função -->
     <!-- <div class="d-flex justify-content-center align-items-center">
@@ -118,7 +135,7 @@
     <!-- A funcionalidade dos botões abaixo está no arquivo script.js na seção de Botões -->
     <!-- Used icons8 icons templates -->
 
-    <nav class="redes-sociais d-flex py-0 py-md-2 justify-content-center align-items-center flex-nowrap">
+    <nav class="redes-sociais container d-flex py-2 justify-content-center align-items-center flex-nowrap">
       <!-- Botão Pix -->
       <ul class="list-inline mb-0 d-flex flex-row justify-content-center align-items-center gap-md-2 flex-nowrap">
         <li class="list-inline-item d-flex mx-0 justify-content-center align-items-center">
@@ -170,7 +187,7 @@
     <!-- MODIFICAR conforme sua preferência -->
     <!-- Botão Curriculum Vitae -->
     <main class="d-flex flex-column p-0">
-      <section class="my-4 d-flex flex-column justify-content-center align-items-center botoes-projetos">
+      <section class="my-md-4 d-flex flex-column justify-content-center align-items-center botoes-projetos">
         <a href="https://tinyurl.com/devrenj-curriculum" target="_blank">
           <button class="botao-menu botao-verde" role="button" aria-label="Acesse meu currículo"
             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Acesse meu currículo"><span
@@ -178,6 +195,14 @@
               Habilidades e Competencias
             </span>
           </button>
+        </a>
+
+        <!-- Botão Babysteps -->
+        <a href="https://tinyurl.com/devrenj-babysteps" target="_blank">
+          <button class="botao-menu botao-azul-claro" role="button" aria-label="Roadmap para iniciantes"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Roadmap para iniciantes"><span
+              class="titulo-botao">Babysteps</span><br><span class="descricao">Comece por
+              aqui</span></button>
         </a>
 
         <!-- Botão DevLib -->
@@ -190,19 +215,10 @@
 
         <!-- Botão Run -->
         <a href="https://tinyurl.com/devrenj-run" target="_blank">
-          <button class="botao-menu botao-azul" role="button" aria-label="Projetos que desenvolvi ao longo dos cursos"
-            data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Projetos que desenvolvi ao longo dos cursos"><span class="titulo-botao">Run</span><br><span
-              class="descricao">Projetos
+          <button class="botao-menu botao-azul" role="button" aria-label="Execute diretamente os projetos"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Execute diretamente os projetos"><span
+              class="titulo-botao">Run</span><br><span class="descricao">Projetos
               Executaveis</span></button>
-        </a>
-
-        <!-- Botão Babysteps -->
-        <a href="https://tinyurl.com/devrenj-babysteps" target="_blank">
-          <button class="botao-menu botao-azul-claro" role="button" aria-label="Roadmap para iniciantes"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Roadmap para iniciantes"><span
-              class="titulo-botao">Babysteps</span><br><span class="descricao">Comece por
-              aqui</span></button>
         </a>
       </section>
     </main>

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
   // Compatibilidade da propriedade filter (blur)
   if (!CSS.supports('backdrop-filter', 'blur(2.5px)')) {
     document
@@ -45,13 +44,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const closeBtn = document.querySelector('.btn-close');
 
+  // Verificar se o cache já tem algum país ou estado
+  const cacheDevPaisAnterior = localStorage.getItem('dev-pais');
+  const cacheDevEstadoAnterior = localStorage.getItem('dev-estado');
+
   // [MODIFICAR] Aqui você coloca seus dados a serem compartilhados:
   const dev = {
     // Nome
     nome: 'Roberto Nóbrega Jr.',
     // Especialidade
     area: 'Desenvolvedor Front-end',
+    // País (abreviatura)
+    pais: 'br',
+    // Estado (abreviatura, disponível apenas para br)
+    estado: 'mg',
   };
+
+  // Garantir letras maiúsculas
+  dev.estado = dev.estado.toUpperCase();
+  dev.pais = dev.pais.toLowerCase();
+
+  // Armazena o seu estado em cache
+  localStorage.setItem('dev-estado', dev.estado);
+  localStorage.setItem('dev-pais', dev.pais);
+
   // Aqui você muda seus links:
   const links = {
     // Link do seu PIX:
@@ -67,6 +83,94 @@ document.addEventListener('DOMContentLoaded', () => {
     // Link do seu perfil profissional:
     compartilhar: 'https://renj.dev.br',
   };
+
+  // Carregar bandeira do país e do estado
+  const bandeiraEstado = document.querySelector('#bandeira-estado');
+  const bandeiraPais = document.querySelector('#bandeira-pais');
+
+  // Consultas ao cache
+  const cacheLinkBandeiraEstado = () => localStorage.getItem('bandeira-estado');
+  const cacheLinkBandeiraPais = () => localStorage.getItem('bandeira-pais');
+  const cacheDevEstado = () => localStorage.getItem('dev-estado');
+  const cacheDevPais = () => localStorage.getItem('dev-pais');
+
+  // Função para captar a bandeira do estado
+  async function chamarAPIBandeira(uf) {
+    if (!uf) return;
+    try {
+      const response = await fetch(
+        'https://apis.codante.io/bandeiras-dos-estados'
+      );
+      const listaBandeiras = await response.json();
+      const bandeira = listaBandeiras.find(
+        (flag) => flag.uf === uf || flag.name === uf
+      );
+      return bandeira.flag_url;
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
+  }
+
+  // Verifica se já existe e armazena em cache
+  (async function verificarEstado() {
+    if (!cacheLinkBandeiraEstado() || dev.estado !== cacheDevEstadoAnterior) {
+      // Se mudar o estado ou não tiver link
+      if (dev.pais === 'br') {
+        const bandeira = await chamarAPIBandeira(dev.estado);
+        localStorage.setItem('bandeira-estado', bandeira);
+        inserirBandeiraEstado();
+      } else {
+        bandeiraEstado.style.display = 'none';
+        console.error('Suporte para estados apenas para o país Brasil(BR)');
+        return;
+      }
+    } else if (cacheLinkBandeiraEstado()) {
+      if (dev.pais === 'br') {
+      inserirBandeiraEstado();
+      } else {
+        bandeiraEstado.style.display = 'none';
+        console.error('Suporte para estados apenas para o país Brasil(BR)');
+        return;
+      }
+    } else {
+      console.error('Não foi possível carregar a bandeira');
+      return;
+    }
+  })();
+
+  if (!cacheLinkBandeiraPais() || dev.pais !== cacheDevPaisAnterior) {
+    localStorage.setItem(
+      'bandeira-pais',
+      `https://flagicons.lipis.dev/flags/4x3/${dev.pais}.svg`
+    );
+    inserirBandeiraPais();
+  } else if (cacheLinkBandeiraPais()) {
+    inserirBandeiraPais();
+  } else {
+    console.error('Não foi possível carregar a bandeira');
+    return;
+  }
+
+  function inserirBandeiraEstado() {
+    if (cacheLinkBandeiraEstado()) {
+      bandeiraEstado.setAttribute('src', cacheLinkBandeiraEstado());
+      bandeiraPais.setAttribute('title', cacheDevEstado());
+      bandeiraEstado.style.display = 'block';
+    } else {
+      console.error('Não foi possível renderizar a bandeira');
+    }
+  }
+
+  function inserirBandeiraPais() {
+    if (cacheLinkBandeiraPais()) {
+      bandeiraPais.setAttribute('src', cacheLinkBandeiraPais());
+      bandeiraPais.setAttribute('title', cacheDevPais());
+      bandeiraPais.style.display = 'block';
+    } else {
+      console.error('Não foi possível renderizar a bandeira');
+    }
+  }
 
   // Captar todos os botões de navegação e adicionar o evento de clique
   const botoesNav = document.querySelectorAll('.nav-btn');
@@ -101,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // [MODIFICAR] Função para compartilhar
-  let timer = 0;
   function compartilhar(plataforma) {
     let perfilUrl = links.compartilhar; // URL a ser compartilhada
     let textoMensagem = `${dev.nome || 'Dev'}\n${
@@ -194,18 +297,18 @@ document.addEventListener('DOMContentLoaded', () => {
           'success'
         );
       }
-    })
+    });
   }
 
   // Quando o usuário clicar no 'X', feche o modal
   closeBtn.addEventListener('click', () => {
     shareModal.toggle();
     reabilitarTooltipCompartilhar();
-  })
+  });
   modal.addEventListener('click', () => {
     shareModal.toggle();
     reabilitarTooltipCompartilhar();
-  })
+  });
 
   // Funções do Sweet Alert - Cria alertas dependendo do evento disparado
   // texto: mostra uma mensagem, precisa ser uma "string"

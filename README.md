@@ -3,9 +3,9 @@
 ## Objetivo
 🇺🇸 Goals
 
-🇧🇷 Projeto open-source criado para ajudar desenvolvedores a terem seu próprio perfil profissional, introduzindo um menu estiloso para seus links pessoais, semelhante a outras soluções.
+🇧🇷 Projeto open-source, responsivo e dinâmico criado para ajudar nossa comunidade Dev a terem seu perfil profissional, contemplando um menu estiloso para seus links pessoais, semelhante a outras soluções.
 
-🇺🇸 Open-source project made to help Devs to have their own professional profile, introducing a stylish menu for their own personal links, like another available solutions.
+🇺🇸 Open-source project, responsive and dynamic made to help our Devs community to have their own professional profile, featuring a stylish menu for their own personal links, similar to other available solutions.
 
 ## Tecnologias utilizadas e bibliotecas
 🇺🇸 Technologies and Libraries
@@ -16,6 +16,8 @@
 - Bootstrap 5
 - Icons8
 - Sweet Alert
+- Flag Icons
+- Bandeira dos Estados Brasileiros (Codante)
 
 ## Clonando este projeto
 🇺🇸 Cloning this project
@@ -29,7 +31,7 @@
 
 🇧🇷 Ou faça o download do projeto, modifique e faça um repositório com o conteúdo:
 
-🇺🇸 Otherwise, download the entire project, customize it and create a repository with the content:
+🇺🇸 Otherwise, download the entire project, customize and create a repository with the content:
 
 - ZIP: <https://github.com/devrenj/devrenj.github.io/archive/refs/heads/main.zip>
 
@@ -42,9 +44,9 @@
 
 ## Links
 
-🇧🇷 O projeto usa Tinyurl para análise de visitantes.
+🇧🇷 O projeto usa links encurtados do Tinyurl para análise de visitantes.
 
-🇺🇸 The project uses Tinyurl links for visit analyses.
+🇺🇸 The project uses shorten links by Tinyurl for visit analyses.
 
 ## LICENSE
 Copyright (c) 2024 Roberto Nóbrega Jr. ([@devrenj](https://www.github.com/devrenj)) under MIT License
