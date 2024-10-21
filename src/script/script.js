@@ -223,17 +223,17 @@
   }
 
   // Funções de Depuração
-  document.onclick = (e) => {
-    e.preventDefault()
-    alert(e.target)
-    // e.target.style.display = "none";
-  }
+  // document.onclick = (e) => {
+  //   e.preventDefault()
+  //   alert(e.target)
+  //   // e.target.style.display = "none";
+  // }
 
-  // Botão de teste
-  const teste = document.querySelector('#teste');
-  teste.onclick = () => {
-  // let vezes = 0;
-    console.log('Teste pressionado', vezes);
-  // vezes++;
-    alertar('Hello World!', 'Ok', 'success');
-  }
+  // // Botão de teste
+  // const teste = document.querySelector('#teste');
+  // teste.onclick = () => {
+  // // let vezes = 0;
+  //   console.log('Teste pressionado', vezes);
+  // // vezes++;
+  //   alertar('Hello World!', 'Ok', 'success');
+  // }
