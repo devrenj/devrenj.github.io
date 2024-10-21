@@ -1,3 +1,4 @@
+alert('Script.js 1');
   // Compatibilidade da propriedade filter (blur)
   if (!CSS.supports('backdrop-filter', 'blur(2.5px)')) {
     document

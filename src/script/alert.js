@@ -1,1 +1,1 @@
-alert(2)
+alert('alert.js 3')
