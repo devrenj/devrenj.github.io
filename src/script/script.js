@@ -1,4 +1,6 @@
-alert('Script.js 1');
+document.addEventListener('DOMContentLoaded', () => {
+
+alert('Script.js Funcionando!');
   // Compatibilidade da propriedade filter (blur)
   if (!CSS.supports('backdrop-filter', 'blur(2.5px)')) {
     document
@@ -16,6 +18,7 @@ alert('Script.js 1');
       keyboard: true,
     })
   );
+  shareModal.show();
 
   var tooltipTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -238,3 +241,4 @@ alert('Script.js 1');
   // // vezes++;
   //   alertar('Hello World!', 'Ok', 'success');
   // }
+});
