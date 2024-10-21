@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function compartilhar(plataforma) {
     let perfilUrl = links.compartilhar; // URL a ser compartilhada
     let textoMensagem = `${dev.nome || 'Dev'}\n${
-      dev.area || 'Desenvolvedor'
+      dev.area || 'Desenvolvedor' // Aqui fica o subtitulo da sua mensagem
     }\n\n`;
     let compartilharUrl;
     let textoParaCopiar;
@@ -182,18 +182,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Função de abrir página
   function abrirPagina(plataforma, url, target) {
-    clearTimeout(timer);
-    alertar(
-      `Abrindo ${
-        plataforma.charAt(0).toUpperCase() +
-        plataforma.slice(1, plataforma.length)
-      }`,
-      false,
-      'success'
-    );
-    timer = setTimeout(() => {
-      window.open(url, target);
-    }, 1500);
+    window.open(url, target);
+    window.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        alertar(
+          `${
+            plataforma.charAt(0).toUpperCase() +
+            plataforma.slice(1, plataforma.length)
+          } aberto`,
+          false,
+          'success'
+        );
+      }
+    })
   }
 
   // Quando o usuário clicar no 'X', feche o modal
