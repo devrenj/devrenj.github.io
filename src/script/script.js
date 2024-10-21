@@ -230,11 +230,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // }
 
   // Botão de teste
-  // const teste = document.querySelector('#teste');
-  // teste.onclick = () => {
+  const teste = document.querySelector('#teste');
+  teste.onclick = () => {
   // let vezes = 0;
   // console.log('Teste pressionado', vezes);
   // vezes++;
-  //   alertar('Hello World!', 'Ok', 'success');
-  // }
+    alert(1)
+    alertar('Hello World!', 'Ok', 'success');
+  }
 });
