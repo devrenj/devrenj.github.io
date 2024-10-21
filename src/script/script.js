@@ -6,7 +6,6 @@ alert('Script.js Funcionando!');
     document
       .querySelector('.modal-content')
       .classList.add('no-backdrop-support');
-      // document.querySelector('.swal-modal').classList.add('no-backdrop-support');
   }
 
   // Funções do Bootstrap 5
@@ -18,12 +17,6 @@ alert('Script.js Funcionando!');
       keyboard: true,
     })
   );
-
-  try {
-    shareModal.show();
-  } catch(err) {
-    alert(err);
-  }
 
   var tooltipTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -47,13 +40,8 @@ alert('Script.js Funcionando!');
   }
 
   btnCompartilhar.addEventListener('click', () => {
-    try {
-      abrirPagina('whatsapp', links.whatsapp, '_blank');  //teste
-    } catch(err) {
-      alert(err);
-    }
-    // shareModal.toggle();
-    // tooltipCompartilhar.dispose();
+    shareModal.toggle();
+    tooltipCompartilhar.dispose();
   });
 
   const closeBtn = document.querySelector('.btn-close');
