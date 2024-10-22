@@ -27,16 +27,26 @@
   --roxo80: #9c00cc80;
   --verde: #00cc00;
   --verde80: #00cc0080;
+  --vermelho: #cc0000;
+  --vermelho80: #cc000080;
+  --vermelho-claro: hsl(0, 100%, 59%);
+  --vermelho-claro80: hsla(0, 100%, 59%, 0.502);
+  --vermelho-claro33: hsla(0, 100%, 59%, 0.2);
+  --vermelho-claro50: hsla(0, 100%, 59%, 0.314);
+  --vermelho-claro-transparente: hsla(0, 100%, 59%, 0.302);
   --azul: #0058cc;
   --azul80: #0058cc80;
   --azul-claro: #00d4ff;
   --azul-claro80: #00d4ff80;
   --azul-claro33: #00d4ff33;
   --azul-claro50: #00d4ff50;
-  --azul-claro-transparente: #00d4ff4d;
+  --azul-claro-transparente: #00d5ff4d;
   --gelo: #add8e6;
+  --cinza-escuro: #212121;
   --cinza: #525252;
+  --cinza-claro33: #52525233;
   --cinza-claro: #cecece;
+  --cinza-claro-transparente: #cfcfcf4d;
   --preto20: #00000020;
   --preto25: #00000025;
   --preto50: #00000050;
@@ -44,7 +54,13 @@
   --transparente: #ffffff00;
 
   /* Design System */
-  --fonte: var(--preto)
+  --gradient-claro-redes-sociais: var(--azul-claro-transparente);
+  --gradient-redes-sociais: var(--azul-claro33);
+  --bg-redes-sociais: var(--fundo-claro-transparente);
+  --borda-redes-sociais: var(--cinza-claro);
+  --cor-botao: var(--azul-claro33);
+  --gradient-botao: var(--azul-claro33);
+  --fonte: var(--preto);
   --borda-solida: var(--azul-claro);
   --borda-cinza: var(--cinza-claro);
   --borda: var(--cinza-claro)
@@ -173,8 +189,8 @@ ul li {
 
 /* Efeito de hover para os ícones */
 .modal-body ul li:hover, .redes-sociais ul li:hover, .foto[data="foto"]:hover {
-  background-color: var(--fundo-claro-transparente);
-  border: 1px solid var(--borda-cinza);
+  background-color: var(--bg-redes-sociais);
+  border: 1px solid var(--borda-redes-sociais);
   box-shadow: var(--sombra) 0 8px 15px;
   transform: translateY(-2px);
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
@@ -184,11 +200,11 @@ ul li {
 .redes-sociais {
   background: var(--branco);
   background: linear-gradient(90deg,
-      var(--transparente) 0%,
-      var(--azul-claro-transparente) 10%,
-      var(--azul-claro33) 50%,
-      var(--azul-claro-transparente) 90%,
-      var(--transparente) 100%);
+    var(--transparente) 0%,
+    var(--gradient-claro-redes-sociais) 10%,
+    var(--gradient-redes-sociais) 50%,
+    var(--gradient-claro-redes-sociais) 90%,
+    var(--transparente) 100%);
 }
 
 
@@ -237,7 +253,7 @@ ul li {
 /* Estilos para botões em geral */
 .botao-menu {
   appearance: none;
-  background-image: linear-gradient(var(--azul-claro33), var(--branco));
+  background-image: linear-gradient(var(--gradient-botao), var(--branco));
   border: 2px solid var(--borda-solida);
   border-radius: 10px;
   color: var(--titulo);
