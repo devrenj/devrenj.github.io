@@ -14,6 +14,7 @@
 - CSS
 - Javascript
 - Bootstrap 5
+- FreePik
 - Icons8
 - Sweet Alert
 - Skill Icons
