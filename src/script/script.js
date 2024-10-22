@@ -68,8 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
   localStorage.setItem('dev-estado', dev.estado);
   localStorage.setItem('dev-pais', dev.pais);
 
-  // Aqui você muda seus links:
+  // [MODIFICAR] Aqui você muda seus links:
+  // Caso não tiver, deixe null
   const links = {
+    // Link do seu Whatsapp: (Atenção! Não é recomendado deixar o número pessoal)
+    whatsapp: null,
     // Link do seu PIX:
     pix: 'https://tinyurl.com/qrcode-pix-roberto',
     // Link do seu Perfil no Github:
