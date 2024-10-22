@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } else if (cacheLinkBandeiraEstado()) {
       if (dev.pais === 'br') {
-      inserirBandeiraEstado();
+        inserirBandeiraEstado();
       } else {
         bandeiraEstado.style.display = 'none';
         console.error('Suporte para estados apenas para o país Brasil(BR)');
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function inserirBandeiraEstado() {
     if (cacheLinkBandeiraEstado()) {
       bandeiraEstado.setAttribute('src', cacheLinkBandeiraEstado());
-      bandeiraPais.setAttribute('title', cacheDevEstado());
+      bandeiraEstado.setAttribute('title', dev.estado.toUpperCase());
       bandeiraEstado.style.display = 'block';
     } else {
       console.error('Não foi possível renderizar a bandeira');
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function inserirBandeiraPais() {
     if (cacheLinkBandeiraPais()) {
       bandeiraPais.setAttribute('src', cacheLinkBandeiraPais());
-      bandeiraPais.setAttribute('title', cacheDevPais());
+      bandeiraPais.setAttribute('title', dev.pais.toUpperCase());
       bandeiraPais.style.display = 'block';
     } else {
       console.error('Não foi possível renderizar a bandeira');
