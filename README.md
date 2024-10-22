@@ -19,6 +19,11 @@
 - Flag Icons
 - Bandeira dos Estados Brasileiros (Codante)
 
+## CNAME
+🇧🇷 Modifique o arquivo 'CNAME' se você possuir DNS próprio, do contrário, apague do projeto.
+
+🇺🇸 Customize the file 'CNAME' if you own a custom DNS, otherwise, delet from the project.
+
 ## Clonando este projeto
 🇺🇸 Cloning this project
 
@@ -49,4 +54,9 @@
 🇺🇸 The project uses shorten links by Tinyurl for visit analyses.
 
 ## LICENSE
+
+🇧🇷 Modifique para o seu nome no arquivio 'LICENSE'
+
+🇺🇸 Change the name located at 'LICENSE' file
+
 Copyright (c) 2024 Roberto Nóbrega Jr. ([@devrenj](https://www.github.com/devrenj)) under MIT License
