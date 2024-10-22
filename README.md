@@ -16,6 +16,7 @@
 - Bootstrap 5
 - Icons8
 - Sweet Alert
+- Skill Icons
 - Flag Icons
 - Bandeira dos Estados Brasileiros (Codante)
 
