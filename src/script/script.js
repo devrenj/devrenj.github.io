@@ -204,7 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // [MODIFICAR] Função para compartilhar
   function compartilhar(plataforma) {
     let perfilUrl = links.compartilhar; // URL a ser compartilhada
     let textoMensagem = `${dev.nome || 'Dev'}\n${
