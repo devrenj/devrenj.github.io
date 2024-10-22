@@ -175,25 +175,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // Captar todos os botões de navegação e adicionar o evento de clique
   const botoesNav = document.querySelectorAll('.nav-btn');
   botoesNav.forEach((elemento) => {
-    elemento.addEventListener('click', () => {
-      // Depurar elemento do evento de clique
-      // console.log(elemento.id);
-      const plataforma = elemento.getAttribute('data-platform');
-      if (plataforma && links[plataforma]) {
-        abrirPagina(plataforma, links[plataforma], '_blank');
-      } else if (elemento.id === 'compartilhar') {
-        return;
-      } else {
-        alertar(
-          `Link para ${plataforma} não encontrado!\nVerifique o arquivo "script.js"`,
-          'Ok',
-          'error'
-        );
-        console.log(
-          `Link para ${plataforma} não encontrado!\nVerifique o arquivo "script.js"`
-        );
-      }
-    });
+    const plataforma = elemento.dataset.platform;
+    const acao = elemento.dataset.action;
+    if (links[plataforma] || links[acao]) {
+      elemento.parentElement.classList.toggle('d-flex');
+      elemento.parentElement.classList.toggle('d-none');
+      elemento.addEventListener('click', () => {
+        // Depurar elemento do evento de clique
+        // console.log(elemento.id);
+        if (plataforma in links) {
+          abrirPagina(plataforma, links[plataforma], '_blank');
+        } else if (elemento.id === 'compartilhar') {
+          return;
+        } else {
+          alertar(
+            `Link para ${plataforma} não encontrado!\nVerifique o arquivo "script.js"`,
+            'Ok',
+            'error'
+          );
+          console.error(
+            `Link para ${plataforma} não encontrado!\nVerifique o arquivo "script.js"`
+          );
+        }
+      });
+    }
   });
 
   // Captar todos os botões do modal e adicionar o evento de clique
