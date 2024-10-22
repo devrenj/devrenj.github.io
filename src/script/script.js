@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Depurar elemento do evento de clique
       // console.log(elemento.id);
       const plataforma = elemento.getAttribute('data-platform');
-      if (plataforma) {
+      if (plataforma && links[plataforma]) {
         abrirPagina(plataforma, links[plataforma], '_blank');
       } else if (elemento.id === 'compartilhar') {
         return;
