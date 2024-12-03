@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Função de abrir página
   function abrirPagina(plataforma, url, target) {
     window.open(url, target);
-    const visualizado = false;
+    let visualizado = false;
     window.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible' && !visualizado) {
         alertar(
