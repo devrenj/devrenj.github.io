@@ -293,8 +293,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Função de abrir página
   function abrirPagina(plataforma, url, target) {
     window.open(url, target);
+    const visualizado = false;
     window.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') {
+      if (document.visibilityState === 'visible' && !visualizado) {
         alertar(
           `${
             plataforma.charAt(0).toUpperCase() +
@@ -303,6 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
           false,
           'success'
         );
+        visualizado = true;
       }
     });
   }
