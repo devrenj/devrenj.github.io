@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Depurar elemento do evento de clique
         // console.log(elemento.id);
         if (plataforma in links) {
-          abrirPagina(plataforma, links[plataforma], '_blank');
+          abrirPagina(plataforma, links[plataforma], '_top');
         } else if (elemento.id === 'compartilhar') {
           return;
         } else {
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verificação se o link para compartilhar existe antes de abrir o modal
     if (compartilharUrl) {
       shareModal.toggle();
-      abrirPagina(plataforma, compartilharUrl, '_blank');
+      abrirPagina(plataforma, compartilharUrl, '_top');
     }
 
     function copiarTexto(textoParaCopiar) {
