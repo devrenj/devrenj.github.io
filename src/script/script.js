@@ -273,7 +273,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function copiarTexto(textoParaCopiar) {
-      if (navigator.clipboard) {
+      let copiado = false;
+      if (navigator.clipboard && !copiado) {
         navigator.clipboard
           .writeText(textoParaCopiar)
           .then(() => {
@@ -284,18 +285,23 @@ document.addEventListener('DOMContentLoaded', () => {
             alertar('Erro ao copiar...', 'Ok', 'error');
             console.error('Erro ao copiar: ', err);
           });
+        copiado = true;
       } else {
         alert('Seu navegador não suporta a API Clipboard.');
       }
     }
   }
 
+  // Função de espera
+  function sleep(segundos) {
+    return new Promise((resolve) => setTimeout(resolve, segundos * 1000));
+  }
+
   // Função de abrir página
-  function abrirPagina(plataforma, url, target) {
-    window.open(url, target);
-    let visualizado = false;
-    window.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible' && !visualizado) {
+  async function abrirPagina(plataforma, url, target) {
+    // let visualizado = false;
+    // window.addEventListener('visibilitychange', () => {
+    //   if (document.visibilityState === 'visible' && !visualizado) {
         alertar(
           `${
             plataforma.charAt(0).toUpperCase() +
@@ -304,9 +310,11 @@ document.addEventListener('DOMContentLoaded', () => {
           false,
           'success'
         );
-        visualizado = true;
-      }
-    });
+        await sleep(1.5);
+        // visualizado = true;
+      // }
+    // });
+    window.open(url, target);
   }
 
   // Quando o usuário clicar no 'X', feche o modal
