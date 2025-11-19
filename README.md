@@ -90,7 +90,7 @@ Once you've done this, you can access the link that will have the same name as y
 
 ## LICENSE
 
-🇧🇷 Modifique para o seu nome no arquivio 'LICENSE'
+🇧🇷 Modifique para o seu nome no arquivo 'LICENSE'
 
 🇺🇸 Change the name located at 'LICENSE' file
 
