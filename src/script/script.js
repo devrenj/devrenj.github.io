@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
           `${
             plataforma.charAt(0).toUpperCase() +
             plataforma.slice(1, plataforma.length)
-          } aberto`,
+          }`,
           false,
           'success'
         );
