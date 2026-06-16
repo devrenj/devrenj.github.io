@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Nome
     nome: 'Roberto Nóbrega Jr.',
     // Especialidade
-    area: 'Desenvolvedor Front-end',
+    area: 'Analista de Sistemas e BI',
     // País (abreviatura)
     pais: 'br',
     // Estado (abreviatura, disponível apenas para br)
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Link do seu Perfil no Instagram:
     instagram: 'https://www.instagram.com/devrenjbr',
     // Link do seu perfil profissional:
-    compartilhar: 'https://renj.dev.br',
+    compartilhar: 'https://devrenj.github.io',
   };
 
   // Carregar bandeira do país e do estado
@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
           `${
             plataforma.charAt(0).toUpperCase() +
             plataforma.slice(1, plataforma.length)
-          } aberto`,
+          }`,
           false,
           'success'
         );
